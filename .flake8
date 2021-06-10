@@ -1,0 +1,4 @@
+[flake8]
+max-line-length = 120
+ignore = E203,E501,W503,F821,F722,N801,BLK100 # Incompatible with black
+exclude = .git, .history, .venv, .vscode, __pycache__, extra, gitlab

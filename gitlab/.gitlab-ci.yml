@@ -1,0 +1,45 @@
+stages:
+  - check_formatting
+  - prepare
+  - release
+
+.tag_only:
+  only:
+    refs:
+      - tags
+
+flake8:
+  tags:
+    - docker
+  image: python:3
+  stage: check_formatting
+  script:
+    - pip install poetry
+    - poetry install
+    - source .venv/bin/activate
+    - flake8 -v
+
+package_addon:
+  tags:
+    - docker
+  stage: prepare
+  image: python:3
+  script:
+    - cp CHANGELOG.md README.md LICENSE uas_assetbank/
+  artifacts:
+    name: "${CI_PROJECT_NAME}_${CI_COMMIT_REF_NAME}"
+    paths:
+      - uas_assetbank
+
+release:
+  extends: .tag_only
+  stage: release
+  tags:
+    - docker
+  image: python:3
+  script:
+    - pip install requests
+    - pip install pygithub
+    - python -m zipfile -c uas_assetbank-${CI_COMMIT_REF_NAME}.zip uas_assetbank
+    - python -m gitlab.create_gitlab_release uas_assetbank-${CI_COMMIT_REF_NAME}.zip
+    - python -m gitlab.create_github_release --tag ${CI_COMMIT_TAG} --name ${CI_COMMIT_TAG} --zip uas_assetbank-${CI_COMMIT_REF_NAME}.zip
