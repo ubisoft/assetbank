@@ -14,9 +14,6 @@ _PackagesForInstall
 # Virtual envs
 .venv
 
-# VS Code
-.vscode
-
 .local
 .history
 
