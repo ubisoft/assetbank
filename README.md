@@ -1,4 +1,12 @@
-# Asset Bank Addon
+# Asset Bank - Blender Add-on
+Asset Bank offers a simple way to gather 3D assets into banks and to import or link those objects into Blender scenes.
+
+## Disclaimer
+>This tool was developed to support a production in 2020 on Blender 2.83. **It is not maintained anymore as a similar feature will be introduced soon into Blender 3.0.**
+>
+>In spite of all our efforts to make it reliable some troubles may occur in use cases we have not faced.  Be aware that neither Ubisoft nor Ubisoft employees can be taken as responsible in case of data loss. Use it at your own risks.
+ 
+
 ![](images/screenshot.jpg)
 
 ## Description
