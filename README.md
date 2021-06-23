@@ -1,3 +1,4 @@
+![](images/AssetBank_Logo_128_A.png)
 # Asset Bank - Blender Add-on
 Asset Bank offers a simple way to gather 3D assets into banks and to import or link those objects into Blender scenes.
 
