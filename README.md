@@ -7,7 +7,7 @@ Asset Bank offers a simple way to gather 3D assets into banks and to import or l
 >
 >**It is not maintained anymore since a similar feature will be introduced soon into Blender 3.**
 
-* **Latest <u>GitHub</u> release:** [github.com/ubisoft/assetbank/releases/latest](https://github.com/ubisoft/assetbank/releases/latest)
+**Latest <u>GitHub</u> release:** [github.com/ubisoft/assetbank/releases/latest](https://github.com/ubisoft/assetbank/releases/latest)
 
 <br />
 
